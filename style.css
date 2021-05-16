@@ -28,7 +28,7 @@ body {
     grid-template-rows: repeat(3, 1fr);
     width: var(--sq-size);
     height: var(--sq-size);
-    margin: 10% auto;
+    margin: 10% auto 5%;
     border: solid 1px var(--text-col);
 }
 
@@ -80,8 +80,5 @@ body {
 @media only screen and (min-width: 1000px) {
     :root {
         --sq-size: 400px;
-    }
-    .game-container {
-        margin: 10% auto 0;
     }
 }
