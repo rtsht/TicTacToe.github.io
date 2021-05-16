@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+
+/* ------------------------------- Variables */
+:root {
+    --sq-size: 50vw;
+    --font-ratio: 5.5;
+    --rows: 3;
+    --empty-tile-col: #c44536;
+    --played-tile-col: #772e25;
+    --winning-tile-col: red;
+    --button-col: #283d3b;
+    /* --button-col: #197278; */
+    --text-col: #edddd4;
+    --background-col: #283d3b;
+    --win-background-col: #598883;
+}
+
+body {
+    font-family: "Comfortaa", cursive;
+    transition: ease-in-out 0.4s;
+    background-color: var(--background-col);
+}
+
+/* ------------------------------- The board container */
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: var(--sq-size);
+    height: var(--sq-size);
+    margin: 10% auto;
+    border: solid 1px var(--text-col);
+}
+
+/* ------------------------------- Each tile */
+.sq {
+    text-align: center;
+    border: 1px solid var(--text-col);
+    font-size: calc(var(--sq-size) / var(--font-ratio));
+    text-transform: uppercase;
+    background-color: var(--empty-tile-col);
+    transition: ease-in-out 0.1s;
+    user-select: none;
+    cursor: pointer;
+    padding-top: 22%;
+    color: var(--text-col);
+}
+.sq:hover {
+    transform: scale(1.05);
+}
+
+/* ------------------------------- Status area */
+.curr-container {
+    margin: auto;
+    display: block;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--text-col);
+}
+#curr-player {
+    font-size: calc(var(--sq-size) / var(--font-ratio));
+    margin: 10px;
+}
+#button {
+    margin: auto;
+    padding: 10px 15px;
+    display: block;
+    font-size: 14pt;
+    background-color: var(--button-col);
+    color: white;
+    border: outset var(--text-col);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 450px) {
+    :root {
+        --sq-size: 70vw;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    :root {
+        --sq-size: 400px;
+    }
+}
