@@ -81,4 +81,7 @@ body {
     :root {
         --sq-size: 400px;
     }
+    .game-container {
+        margin: 10% auto 0;
+    }
 }
